@@ -1,17 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+const taches = [
+  {name:"sortir le chien", checked: true, id: "1"},
+  {name:"faire la vaisselle", checked: false, id: "2"},
+  {name:"sortir les poubelles", checked: true, id: "3"},
+]
+// const listeCourse = [
+//   {name: "oeufs", quantity:"12", id:1},
+//   {name: "poires", quantity:"9", id:2},
+//   {name: "pommes", quantity:"8", id:3},
+//   {name: "baguette", quantity:"1",id:4},
+// ]
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+    <App taches={taches} />,
   document.getElementById('root')
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
